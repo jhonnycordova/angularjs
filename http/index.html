@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="MyFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Mi primera pagina Con Angular JS</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="controller.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="FirstController">
+    <input type="text" ng-model="newPost.title">
+    <br>
+    <textarea ng-model="newPost.body" rows="8" cols="80"></textarea>
+    <br>
+    <button type="button" ng-click="addPost()">Agregar Post</button>
+    <ul>
+      <li ng-repeat="post in posts">
+
+           <h3>{{post.title}}</h3>
+           <p>
+             {{post.body}}
+           </p>
+
+      </li>
+    </ul>
+  </body>
+</html>

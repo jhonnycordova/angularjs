@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="CustomDirective">
+  <head>
+    <meta charset="utf-8">
+    <title>Mi Primera Directiva AngularJS</title>
+    <link rel="stylesheet" href="autocomplete-jquery-ui.structure.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="autocomplete-jquery-ui.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <style>
+      .circular{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+      .no-list li{
+        list-style-type: none;
+      }
+      body,html{
+        text-align: center;
+        background-color: #eee;
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body ng-controller="AppController">
+    <input type="text" my-autocomplete="repos" placeholder="Buscar Repositorios">
+    <ul class="no-list" >
+      <li ng-repeat="repo in posts" ng-hide="main_repo && main_repo != repo.name">
+        <div class="circular" back-img="{{repo.owner.avatar_url}}"></div>
+        <h1 class="inline-block">{{repo.name}}</h1>
+      </li>
+    </ul>
+    <a href="#" ng-click="main_repo = null">Limpiar</a>
+  </body>
+</html>

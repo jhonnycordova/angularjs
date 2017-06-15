@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="CustomDirective">
+  <head>
+    <meta charset="utf-8">
+    <title>NG-ROUTE</title>
+    <link rel="stylesheet" href="autocomplete-jquery-ui.structure.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="autocomplete-jquery-ui.js" charset="utf-8"></script>
+    <script src="//code.angularjs.org/1.6.4/angular-route.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="directives.js" ></script>
+    <script src="controller.js" ></script>
+    <style>
+      .circular{
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+      }
+      .no-list li{
+        list-style-type: none;
+      }
+      body,html{
+        text-align: center;
+        background-color: #eee;
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body>
+      <div ng-view></div>
+  </body>
+</html>
